@@ -1,0 +1,29 @@
+@import "../variables";
+
+.HeaderUser {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5% 2%;
+  section {
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+  }
+  img {
+    width: 45%;
+  }
+  article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i {
+      color: $primary_color;
+    }
+    a {
+      text-decoration: none;
+      color: $primary_color;
+      font-weight: 700;
+    }
+  }
+}

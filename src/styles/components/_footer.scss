@@ -1,0 +1,12 @@
+@import "../variables";
+
+.Footer {
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #ccc;
+  padding: 1rem 0 1rem;
+  margin-top: 4%;
+  p {
+    color: $primary_color;
+  }
+}

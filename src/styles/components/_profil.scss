@@ -1,0 +1,19 @@
+.Profil {
+  background-color: #12002b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    color: white;
+    text-align: center;
+    line-height: 0.5;
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+  button {
+    color: white;
+    background-color: #00bc77;
+    padding: 1%;
+    margin-bottom: 3%;
+  }
+}

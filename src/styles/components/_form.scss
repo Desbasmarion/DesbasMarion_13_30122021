@@ -1,0 +1,46 @@
+@import "../variables";
+
+.Form {
+  background-color: white;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  i,
+  h1 {
+    color: $primary_color;
+  }
+  form {
+    width: 85%;
+    .userName,
+    .password {
+      color: $primary_color;
+      font-weight: 700;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 5%;
+    }
+    input {
+      height: 30px;
+    }
+    .remember {
+      display: flex;
+      align-items: center;
+      color: $primary_color;
+    }
+    .signInButton {
+      background-color: #00bc77;
+      width: 100%;
+      text-align: center;
+      padding: 4%;
+      margin-top: 3%;
+      a {
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+}

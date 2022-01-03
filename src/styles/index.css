@@ -1,0 +1,338 @@
+* {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.Header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5% 2%;
+}
+
+.Header img {
+  width: 45%;
+}
+
+.Header article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 6%;
+}
+
+.Header article i {
+  color: #2c3e50;
+}
+
+.Header article a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.Banner {
+  position: relative;
+}
+
+.Banner img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Banner article {
+  width: 23%;
+  padding: 1%;
+  padding-left: 2%;
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  background-color: white;
+  line-height: 0.8;
+}
+
+.Banner article p {
+  color: #2c3e50;
+}
+
+.Banner article .firstText {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 0.5;
+}
+
+.Features {
+  margin-top: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.Features article {
+  text-align: center;
+  width: 30%;
+}
+
+.Features article h2 {
+  font-size: 20px;
+}
+
+.Features article p {
+  color: #2c3e50;
+}
+
+.Features article .imageContainer {
+  width: 25%;
+  border: 10px solid #00bc77;
+  border-radius: 50%;
+  padding: 3%;
+  margin: auto;
+}
+
+.Features article .imageContainer img {
+  width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.Footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top: 2px solid #ccc;
+  padding: 1rem 0 1rem;
+  margin-top: 4%;
+}
+
+.Footer p {
+  color: #2c3e50;
+}
+
+.SignIn section {
+  background-color: #12002b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.SignIn .Footer {
+  margin-top: 0;
+}
+
+.Form {
+  background-color: white;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.Form i,
+.Form h1 {
+  color: #2c3e50;
+}
+
+.Form form {
+  width: 85%;
+}
+
+.Form form .userName,
+.Form form .password {
+  color: #2c3e50;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 5%;
+}
+
+.Form form input {
+  height: 30px;
+}
+
+.Form form .remember {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #2c3e50;
+}
+
+.Form form .signInButton {
+  background-color: #00bc77;
+  width: 100%;
+  text-align: center;
+  padding: 4%;
+  margin-top: 3%;
+}
+
+.Form form .signInButton a {
+  color: white;
+  font-weight: bold;
+}
+
+.HeaderUser {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5% 2%;
+}
+
+.HeaderUser section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 15%;
+}
+
+.HeaderUser img {
+  width: 45%;
+}
+
+.HeaderUser article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.HeaderUser article i {
+  color: #2c3e50;
+}
+
+.HeaderUser article a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.Profil {
+  background-color: #12002b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Profil h1 {
+  color: white;
+  text-align: center;
+  line-height: 0.5;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.Profil button {
+  color: white;
+  background-color: #00bc77;
+  padding: 1%;
+  margin-bottom: 3%;
+}
+
+.CardsTransactions {
+  background-color: white;
+  width: 80%;
+  margin-bottom: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 0.7;
+}
+
+.CardsTransactions button {
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin: 0;
+}
+
+.CardsTransactions .amount {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.CardsTransactions p {
+  color: #2c3e50;
+}
+
+.User .Footer {
+  margin-top: 0;
+}
+/*# sourceMappingURL=index.css.map */
