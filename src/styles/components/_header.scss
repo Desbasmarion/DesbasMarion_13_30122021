@@ -23,3 +23,53 @@
     }
   }
 }
+
+//////////////////////////////////////////////Responsive//////////////////////////////////////////////
+
+@media screen and (max-width: 1195px) {
+  .Header {
+    article {
+      width: 8%;
+    }
+  }
+}
+
+@media screen and (max-width: 897px) {
+  .Header {
+    article {
+      width: 10%;
+    }
+  }
+}
+
+@media screen and (max-width: 717px) {
+  .Header {
+    article {
+      width: 13%;
+    }
+  }
+}
+
+@media screen and (max-width: 552px) {
+  .Header {
+    article {
+      width: 19%;
+    }
+  }
+}
+
+@media screen and (max-width: 461px) {
+  .Header {
+    article {
+      width: 30%;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .Header {
+    article {
+      width: 45%;
+    }
+  }
+}

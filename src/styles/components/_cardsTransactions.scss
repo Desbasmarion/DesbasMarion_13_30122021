@@ -26,3 +26,27 @@
     color: $primary_color;
   }
 }
+
+//////////////////////////////////////////////Responsive//////////////////////////////////////////////
+
+@media screen and (max-width: 560px) {
+  .CardsTransactions {
+    button {
+      height: 42px;
+      font-size: 12px;
+    }
+    .amount {
+      font-size: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .CardsTransactions {
+    flex-direction: column;
+    .informations {
+      width: 90%;
+      margin-bottom: 3%;
+    }
+  }
+}

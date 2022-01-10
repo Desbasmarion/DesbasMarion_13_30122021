@@ -28,3 +28,17 @@
     }
   }
 }
+
+//////////////////////////////////////////////Responsive//////////////////////////////////////////////
+
+@media screen and (max-width: 768px) {
+  .Features {
+    flex-direction: column;
+    article {
+      width: 100%;
+      .imageContainer {
+        width: 15%;
+      }
+    }
+  }
+}

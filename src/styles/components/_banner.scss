@@ -26,3 +26,43 @@
     }
   }
 }
+
+//////////////////////////////////////////////Responsive//////////////////////////////////////////////
+
+@media screen and (max-width: 1061px) {
+  .Banner {
+    article {
+      width: 33%;
+    }
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .Banner {
+    article {
+      width: 42%;
+    }
+  }
+}
+
+@media screen and (max-width: 581px) {
+  .Banner {
+    article {
+      width: 55%;
+      .firstText {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .Banner {
+    article {
+      width: 55%;
+      .firstText {
+        font-size: 15px;
+      }
+    }
+  }
+}

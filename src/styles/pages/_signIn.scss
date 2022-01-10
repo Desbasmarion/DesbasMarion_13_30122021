@@ -8,3 +8,27 @@
     margin-top: 0;
   }
 }
+
+//////////////////////////////////////////////Responsive//////////////////////////////////////////////
+
+@media screen and (max-width: 915px) {
+  .SignIn {
+    .Form {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .SignIn {
+    .Form {
+      width: 70%;
+      h1 {
+        font-size: 15px;
+      }
+      label {
+        font-size: 12px;
+      }
+    }
+  }
+}

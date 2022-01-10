@@ -48,6 +48,42 @@ body {
   font-weight: 700;
 }
 
+@media screen and (max-width: 1195px) {
+  .Header article {
+    width: 8%;
+  }
+}
+
+@media screen and (max-width: 897px) {
+  .Header article {
+    width: 10%;
+  }
+}
+
+@media screen and (max-width: 717px) {
+  .Header article {
+    width: 13%;
+  }
+}
+
+@media screen and (max-width: 552px) {
+  .Header article {
+    width: 19%;
+  }
+}
+
+@media screen and (max-width: 461px) {
+  .Header article {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .Header article {
+    width: 45%;
+  }
+}
+
 .Banner {
   position: relative;
 }
@@ -78,6 +114,36 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 0.5;
+}
+
+@media screen and (max-width: 1061px) {
+  .Banner article {
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .Banner article {
+    width: 42%;
+  }
+}
+
+@media screen and (max-width: 581px) {
+  .Banner article {
+    width: 55%;
+  }
+  .Banner article .firstText {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .Banner article {
+    width: 55%;
+  }
+  .Banner article .firstText {
+    font-size: 15px;
+  }
 }
 
 .Features {
@@ -120,6 +186,21 @@ body {
       align-self: center;
 }
 
+@media screen and (max-width: 768px) {
+  .Features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Features article {
+    width: 100%;
+  }
+  .Features article .imageContainer {
+    width: 15%;
+  }
+}
+
 .Footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,6 +229,24 @@ body {
 
 .SignIn .Footer {
   margin-top: 0;
+}
+
+@media screen and (max-width: 915px) {
+  .SignIn .Form {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .SignIn .Form {
+    width: 70%;
+  }
+  .SignIn .Form h1 {
+    font-size: 15px;
+  }
+  .SignIn .Form label {
+    font-size: 12px;
+  }
 }
 
 .Form {
@@ -267,6 +366,39 @@ body {
   font-weight: 700;
 }
 
+@media screen and (max-width: 1024px) {
+  .HeaderUser section {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .HeaderUser section {
+    width: 27%;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .HeaderUser section {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .HeaderUser section {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  .HeaderUser section {
+    width: 90%;
+  }
+  .HeaderUser section a {
+    font-size: 12px;
+  }
+}
+
 .Profil {
   background-color: #12002b;
   display: -webkit-box;
@@ -330,6 +462,29 @@ body {
 
 .CardsTransactions p {
   color: #2c3e50;
+}
+
+@media screen and (max-width: 560px) {
+  .CardsTransactions button {
+    height: 42px;
+    font-size: 12px;
+  }
+  .CardsTransactions .amount {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .CardsTransactions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .CardsTransactions .informations {
+    width: 90%;
+    margin-bottom: 3%;
+  }
 }
 
 .User .Footer {
