@@ -2,6 +2,7 @@ import React from 'react';
 import CardsTransactions from './CardsTransactions';
 
 function Profil() {
+	
 	return (
 		<div className='Profil'>
 			<h1><p>Welcome back</p>
