@@ -1,16 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function CardsTransactions() {
+const CardsTransactions = ({ numTransaction, amount, status }) => {
+
+	CardsTransactions.propTypes = {
+		numTransaction: PropTypes.string,
+		amount: PropTypes.number,
+		status: PropTypes.string
+	};
+
 	return (
 		<article className='CardsTransactions'>
 			<div className='informations'>
-				<p>Argent Bank Checking (x8349)</p>
-				<p className='amount'>$2,082.79</p>
-				<p>Available Balance</p>
+				<p>{numTransaction}</p>
+				<p className='amount'>{amount}$</p>
+				<p>{status}</p>
 			</div>
 			<button>View transactions</button>    
 		</article>
 	);
-}
+};
 
 export default CardsTransactions;

@@ -26,7 +26,7 @@ function App() {
 			})
 			.catch(err => console.log(err));
 
-		if(uid) dispatch(getUser());
+		if(uid) dispatch(getUser(token));
 		
 	}, [uid]);
 

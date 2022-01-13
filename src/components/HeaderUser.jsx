@@ -1,7 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function HeaderUser() {
+
+	const userData = useSelector(state => state.userReducer);
+
 	return (
 		<div className='HeaderUser'> 
 			<NavLink to='/'>
@@ -11,7 +15,7 @@ function HeaderUser() {
 				<article>
 					<i className="fas fa-user-circle"></i>
 					<NavLink to='/user' className={({ isActive }) => 'nav-link' + (isActive ? ' activated' : '')}>
-          Tony
+						{userData.firstName}
 					</NavLink>
 				</article> 
 				<article>
