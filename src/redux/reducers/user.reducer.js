@@ -1,18 +1,27 @@
-import { GET_USER, UPDATE_INFOS } from '../actions/user.actions';
+import {  GET_TOKEN, GET_USER, UPDATE_INFOS } from '../actions/user.actions';
+import produce from 'immer';
 
-const initialState = {};
+const initialState = {token: '', status: 0, data: {}};
 
 const userReducer = (state = initialState, action) => {
 	switch (action.type) {
+	
+	case GET_TOKEN:
+		return produce(state, draft =>{
+			draft.token = action.payload;
+			draft.status = action.payloadTwo;
+		});
+	
 	case GET_USER:
-		return action.payload;
+		return produce(state, draft => {
+			draft.data = action.payload;
+		});
 
 	case UPDATE_INFOS:
-		return {
-			...state,
-			firstName: action.payload,
-			lastName: action.payloadTwo
-		};
+		return produce(state, draft => {
+			draft.data = action.payload;
+		});
+
 	default:
 		return state;
 	}

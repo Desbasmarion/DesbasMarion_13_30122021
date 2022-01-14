@@ -1,37 +1,27 @@
 import React, { useState } from 'react';
-//import { NavLink } from 'react-router-dom';
-import axios from 'axios';
+import { getToken } from '../redux/actions/user.actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { Navigate } from 'react-router-dom';
 
 const Form = () => {
 
 	const [ email, setEmail] = useState('');
 	const [ password, setPassword ] = useState('');
 
+	const status = useSelector(state => state.userReducer.status);
+
+	const dispatch = useDispatch();
+
 	const handleLogin = (e) => {
 		e.preventDefault();
 
-		const emailError = document.querySelector('.errorMail');
-		const passwordError = document.querySelector('.errorPassword');
-
-		axios({
-			method: 'post',
-			url: 'http://localhost:3001/api/v1/user/login',
-			data: {
-				email,
-				password
-			}
-		})
-			.then( (res) => {
-				if(res.data.errors){
-					emailError.innerHTML = res.data.errors.email;
-					passwordError.innerHTML = res.data.errors.password;
-				} else{
-					localStorage.setItem('token', res.data.body.token);
-					window.location = 'user';
-				}
-			})
-			.catch( (err) => console.log(err));
+		dispatch(getToken(email, password));
 	};
+
+	
+	if(status === 200){
+		return <Navigate to='/user' />;
+	}
 
 
 	return (
@@ -42,7 +32,7 @@ const Form = () => {
 				<div className="userName">
 					<label htmlFor="userName">Email</label>
 					<input type="text" id="userName" onChange={ (e) => setEmail(e.target.value)} value={email}/>
-					<div className='errorMail'></div>
+										
 				</div>
 				<div className="password">
 					<label htmlFor="password">Password</label>

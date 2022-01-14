@@ -3,35 +3,36 @@ import CardsTransactions from './CardsTransactions';
 import { useSelector, useDispatch } from 'react-redux';
 import accountData from '../data';
 import { updateInfos } from '../redux/actions/user.actions';
- 
+
+
 function Profil() {
 	const userData = useSelector(state => state.userReducer);
 	const [ editFirstName, setFirstName ] = useState('');
 	const [ editLastName, setLastName ] = useState ('');
 	const [ updateForm, setUpdateForm ] = useState(false);
 	const dispatch = useDispatch();
-	const token = localStorage.getItem('token');
-	
+
 	const handleUpdate = () => {
-		dispatch(updateInfos(token, editFirstName, editLastName));
+		dispatch(updateInfos(userData.token, editFirstName, editLastName));
 		setUpdateForm(false);
 	};
+
+	const firstName = userData.data.firstName;
+	const lastName = userData.data.lastName;
 	
 	return (
 		<div className='Profil'>
 			<h1><p>Welcome back</p>
-				<p>{userData.firstName}</p> <p>{userData.lastName}!</p>
+				<p>{firstName}</p> <p>{lastName}!</p>
 			</h1>
 			<button onClick={ () => setUpdateForm(!updateForm)}>Edit Name</button>
 			<div className='nameUpdate'>
 				{updateForm === true && (
 					<Fragment>
-						<input type='text' placeholder={userData.firstName} onChange={ (e) => setFirstName(e.target.value)}></input>
-						<input type='text' placeholder={userData.lastName} onChange={ (e) => setLastName(e.target.value)}></input>
+						<input type='text' placeholder={userData.data.firstName} onChange={ (e) => setFirstName(e.target.value)}></input>
+						<input type='text' placeholder={userData.data.lastName} onChange={ (e) => setLastName(e.target.value)}></input>
 						<button onClick={handleUpdate}>Save</button>
-						<button>Cancel</button>
-					
-						
+						<button onClick={() => setUpdateForm(false)}>Cancel</button>					
 					</Fragment>
 				)}
 			</div>

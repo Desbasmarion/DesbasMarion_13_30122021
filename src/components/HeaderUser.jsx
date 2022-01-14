@@ -1,10 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import {  useSelector } from 'react-redux';
+
 
 function HeaderUser() {
-
 	const userData = useSelector(state => state.userReducer);
+
+	const Logout = () => {
+		//dispatch(getUser(''), getToken(''));
+	};
 
 	return (
 		<div className='HeaderUser'> 
@@ -15,12 +19,12 @@ function HeaderUser() {
 				<article>
 					<i className="fas fa-user-circle"></i>
 					<NavLink to='/user' className={({ isActive }) => 'nav-link' + (isActive ? ' activated' : '')}>
-						{userData.firstName}
+						{userData.data.firstName}
 					</NavLink>
 				</article> 
 				<article>
 					<i className="fas fa-sign-out-alt" />
-					<NavLink to='/' className={({ isActive }) => 'nav-link' + (isActive ? ' activated' : '')}>
+					<NavLink onClick={Logout} to='/' className={({ isActive }) => 'nav-link' + (isActive ? ' activated' : '')}>
           Sign Out
 					</NavLink>
 				</article>

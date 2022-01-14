@@ -1,10 +1,12 @@
 import React from 'react';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 function Error() {
 	return (
 		<div>
-      error
+			<Header />
+			<p>Sorry, this page does not exist</p>
 			<Footer />
 		</div>
 	);
