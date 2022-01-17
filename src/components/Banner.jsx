@@ -1,5 +1,10 @@
 import React from 'react';
 
+/**
+ * 
+ * @returns Banner component
+ */
+
 function Banner() {
 	return (
 		<div className='Banner'>

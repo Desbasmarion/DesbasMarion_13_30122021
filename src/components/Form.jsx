@@ -3,6 +3,11 @@ import { getToken } from '../redux/actions/user.actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 
+/**
+ * 
+ * @returns Login component with Redux state 
+ */
+
 const Form = () => {
 
 	const [ email, setEmail] = useState('');
@@ -32,7 +37,7 @@ const Form = () => {
 		}else{
 			document.querySelector('.userNotFound').innerHTML = '';
 		}
-		
+
 		dispatch(getToken(email, password));
 	};
 

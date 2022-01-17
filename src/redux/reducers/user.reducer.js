@@ -1,6 +1,10 @@
 import {  GET_TOKEN, GET_USER, UPDATE_INFOS } from '../actions/user.actions';
 import produce from 'immer';
 
+/**
+ * reducer for user 
+ */
+
 const initialState = {token: null, status: 0, data: {}};
 
 const userReducer = (state = initialState, action) => {

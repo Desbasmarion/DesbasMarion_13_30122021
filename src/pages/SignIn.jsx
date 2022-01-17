@@ -3,6 +3,10 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Form from '../components/Form';
 
+/**
+ * 
+ * @returns Login page
+ */
 
 function SignIn() {
 	return (

@@ -2,6 +2,10 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
+/**
+ * 
+ * @returns Header for user component
+ */
 
 function HeaderUser() {
 	const userData = useSelector(state => state.userReducer);

@@ -4,6 +4,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import accountData from '../data';
 import { updateInfos } from '../redux/actions/user.actions';
 
+/**
+ * 
+ * @returns Profil component with Redux state 
+ */
 
 function Profil() {
 	const userData = useSelector(state => state.userReducer);

@@ -1,6 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * 
+ * @param { String } numTransaction - mocked data
+ * @param { Number } amount - mocked data
+ * @param { String } status - mocked data 
+ * @returns Cards transactions component 
+ */
 const CardsTransactions = ({ numTransaction, amount, status }) => {
 
 	CardsTransactions.propTypes = {

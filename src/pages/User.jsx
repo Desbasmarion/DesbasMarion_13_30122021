@@ -3,6 +3,10 @@ import Footer from '../components/Footer';
 import HeaderUser from '../components/HeaderUser';
 import Profil from '../components/Profil';
 
+/**
+ * 
+ * @returns User page
+ */
 
 function User() {
 

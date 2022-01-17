@@ -1,12 +1,12 @@
 import axios from 'axios';
 
+/**
+ * Actions for user: recovery token, user informations and update firstname and lastname
+ */
+
 export const GET_TOKEN = 'GET_TOKEN';
 export const GET_USER = 'GET_USER';
 export const UPDATE_INFOS = 'UPDATE_INFOS';
-
-//Errors
-export const GET_USER_ERRORS = 'GET_USER_ERRORS';
-export const UPDATE_INFOS_ERRORS = 'UPDATE_INFOS_ERRORS';
 
 
 export const getToken = (email, password) => {
@@ -40,7 +40,6 @@ export const getUser = (token) => {
 			})
 			.catch(err => {
 				console.log(err);
-				dispatch({ type: GET_USER_ERRORS, payload: err.message});
 			});
 	};
 };
@@ -61,7 +60,6 @@ export const updateInfos = (token, firstName, lastName) => {
 			})
 			.catch(err => {
 				console.log(err);
-				dispatch({ type: UPDATE_INFOS_ERRORS, payload: err.message});
 			});
 	};
 };

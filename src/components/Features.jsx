@@ -1,5 +1,10 @@
 import React from 'react';
 
+/**
+ * 
+ * @returns Features component
+ */
+
 function Features() {
 	return (
 		<div className='Features'>

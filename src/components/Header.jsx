@@ -1,6 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+/**
+ * 
+ * @returns Header component
+ */
+
 function Header() {
 	return (
 		<div className='Header'>

@@ -1,3 +1,7 @@
+/**
+ * mocked data
+ */
+
 const accountData = [
 	{
 		numTransaction: 'Argent Bank Checking (x8349)',
