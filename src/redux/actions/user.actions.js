@@ -4,7 +4,6 @@ export const GET_TOKEN = 'GET_TOKEN';
 export const GET_USER = 'GET_USER';
 export const UPDATE_INFOS = 'UPDATE_INFOS';
 
-
 //Errors
 export const GET_USER_ERRORS = 'GET_USER_ERRORS';
 export const UPDATE_INFOS_ERRORS = 'UPDATE_INFOS_ERRORS';
@@ -66,3 +65,4 @@ export const updateInfos = (token, firstName, lastName) => {
 			});
 	};
 };
+

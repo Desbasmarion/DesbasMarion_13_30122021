@@ -29,10 +29,14 @@ function Profil() {
 			<div className='nameUpdate'>
 				{updateForm === true && (
 					<Fragment>
-						<input type='text' placeholder={userData.data.firstName} onChange={ (e) => setFirstName(e.target.value)}></input>
-						<input type='text' placeholder={userData.data.lastName} onChange={ (e) => setLastName(e.target.value)}></input>
-						<button onClick={handleUpdate}>Save</button>
-						<button onClick={() => setUpdateForm(false)}>Cancel</button>					
+						<div className='textEditContainer'>
+							<input type='text' placeholder={userData.data.firstName} onChange={ (e) => setFirstName(e.target.value)}></input>
+							<input type='text' placeholder={userData.data.lastName} onChange={ (e) => setLastName(e.target.value)}></input>
+						</div>
+						<div className='buttonEditContainer'>
+							<button onClick={handleUpdate}>Save</button>
+							<button onClick={() => setUpdateForm(false)}>Cancel</button>		
+						</div>
 					</Fragment>
 				)}
 			</div>

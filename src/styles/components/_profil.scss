@@ -16,4 +16,41 @@
     padding: 1%;
     margin-bottom: 3%;
   }
+  .buttonEditContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    button {
+      width: 40%;
+    }
+  }
+  .nameUpdate {
+    width: 50%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .textEditContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    input {
+      width: 45%;
+    }
+  }
+}
+//////////////////////////////////////////////Responsive//////////////////////////////////////////////
+
+@media screen and (max-width: 800px) {
+  .Profil {
+    .buttonEditContainer {
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      button {
+        width: 40%;
+      }
+    }
+  }
 }

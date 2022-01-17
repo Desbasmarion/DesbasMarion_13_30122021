@@ -14,7 +14,25 @@ const Form = () => {
 
 	const handleLogin = (e) => {
 		e.preventDefault();
+		
+		if(email == ''){
+			document.querySelector('.errorEmail').innerHTML = 'Veuillez renseigner ce champ';
+		}else{
+			document.querySelector('.errorEmail').innerHTML = '';
+		}
 
+		if(password == ''){
+			document.querySelector('.errorPassword').innerHTML = 'Veuillez renseigner ce champ';
+		}else{
+			document.querySelector('.errorPassword').innerHTML = '';
+		}
+		
+		if(status != 200){
+			document.querySelector('.userNotFound').innerHTML = 'Utilisateur non trouvé';
+		}else{
+			document.querySelector('.userNotFound').innerHTML = '';
+		}
+		
 		dispatch(getToken(email, password));
 	};
 
@@ -22,7 +40,6 @@ const Form = () => {
 	if(status === 200){
 		return <Navigate to='/user' />;
 	}
-
 
 	return (
 		<div className='Form'>
@@ -32,18 +49,18 @@ const Form = () => {
 				<div className="userName">
 					<label htmlFor="userName">Email</label>
 					<input type="text" id="userName" onChange={ (e) => setEmail(e.target.value)} value={email}/>
-										
+					<p className='errorEmail'></p>
 				</div>
 				<div className="password">
 					<label htmlFor="password">Password</label>
 					<input type="password" id="password" onChange={(e) => setPassword(e.target.value)} value={password}/>
-					<div className='errorPassword'></div>
+					<p className='errorPassword'></p>
 				</div>
 				<div className="remember">
 					<input type="checkbox" id="remember" /><label htmlFor="remember">Remember me</label>
 				</div>
+				<p className='userNotFound'></p>
 				<div className='signInButton'>
-					{/* <NavLink to="/user">Sign In</NavLink> */}
 					<input type='submit' value='Sign In' />
 				</div>
 			</form>
