@@ -11,15 +11,17 @@ Code for project 13 of DA Front-end path: use an API for a bank user account wit
 [![made-with-React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://fr.reactjs.org/)
 [![made-with-Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)](https://redux.js.org/)
 ## Installation
-1. Fork this repository 
-2. Clone it on your computer 
-### Backend 
+1. Fork this repository for the Frontend part
+2. Clone it on your computer
+3. Fork the repository for the Backend part https://github.com/Desbasmarion/Project-10-Bank-API
+4. Clone it on your computer
+5. Run two parts in the same time
+### Backend
 3. The `npm install` command will allow you to install the dependencies.
 4. The `npm run dev:server` command will allow you to run the micro API.
 ### Frontend
 5. The `cd argentbank` command will allow you to go to frontend branch
 6. The `npm install` command will allow you to install the dependencies.
 7. The `npm start` command will allow you to run the app.
-## Deployment
-You can visit ARGENTBANK app on netlify: 
+
 
