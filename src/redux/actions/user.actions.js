@@ -7,6 +7,7 @@ import axios from 'axios';
 export const GET_TOKEN = 'GET_TOKEN';
 export const GET_USER = 'GET_USER';
 export const UPDATE_INFOS = 'UPDATE_INFOS';
+export const LOGOUT = 'LOGOUT';
 
 
 export const getToken = (email, password) => {
@@ -64,3 +65,6 @@ export const updateInfos = (token, firstName, lastName) => {
 	};
 };
 
+export const logout = () => {
+	return (dispatch) => dispatch({ type: LOGOUT, payload: undefined});
+}; 

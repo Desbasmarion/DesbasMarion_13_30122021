@@ -1,4 +1,4 @@
-import {  GET_TOKEN, GET_USER, UPDATE_INFOS } from '../actions/user.actions';
+import {  GET_TOKEN, GET_USER, UPDATE_INFOS, LOGOUT } from '../actions/user.actions';
 import produce from 'immer';
 
 /**
@@ -25,6 +25,9 @@ const userReducer = (state = initialState, action) => {
 		return produce(state, draft => {
 			draft.data = action.payload;
 		});
+
+	case LOGOUT: 
+		return initialState;
 
 	default:
 		return state;

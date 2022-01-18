@@ -3,6 +3,7 @@ import CardsTransactions from './CardsTransactions';
 import { useSelector, useDispatch } from 'react-redux';
 import accountData from '../data';
 import { updateInfos } from '../redux/actions/user.actions';
+import { Navigate } from 'react-router-dom';
 
 /**
  * 
@@ -11,6 +12,7 @@ import { updateInfos } from '../redux/actions/user.actions';
 
 function Profil() {
 	const userData = useSelector(state => state.userReducer);
+	console.log(userData);
 	const [ editFirstName, setFirstName ] = useState('');
 	const [ editLastName, setLastName ] = useState ('');
 	const [ updateForm, setUpdateForm ] = useState(false);
@@ -20,6 +22,10 @@ function Profil() {
 		dispatch(updateInfos(userData.token, editFirstName, editLastName));
 		setUpdateForm(false);
 	};
+
+	if(userData.data.id === undefined){
+		return <Navigate to='/sign-in' />;
+	}
 
 	const firstName = userData.data.firstName;
 	const lastName = userData.data.lastName;
@@ -34,8 +40,8 @@ function Profil() {
 				{updateForm === true && (
 					<Fragment>
 						<div className='textEditContainer'>
-							<input type='text' placeholder={userData.data.firstName} onChange={ (e) => setFirstName(e.target.value)}></input>
-							<input type='text' placeholder={userData.data.lastName} onChange={ (e) => setLastName(e.target.value)}></input>
+							<input type='text' placeholder={firstName} onChange={ (e) => setFirstName(e.target.value)}></input>
+							<input type='text' placeholder={lastName} onChange={ (e) => setLastName(e.target.value)}></input>
 						</div>
 						<div className='buttonEditContainer'>
 							<button onClick={handleUpdate}>Save</button>

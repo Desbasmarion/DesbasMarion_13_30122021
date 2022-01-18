@@ -14,6 +14,7 @@ const Form = () => {
 	const [ password, setPassword ] = useState('');
 
 	const status = useSelector(state => state.userReducer.status);
+	console.log(status);
 
 	const dispatch = useDispatch();
 
@@ -33,7 +34,10 @@ const Form = () => {
 		}
 		
 		if(status != 200){
-			document.querySelector('.userNotFound').innerHTML = 'Utilisateur non trouvé';
+			setTimeout(() => {
+				document.querySelector('.userNotFound').innerHTML = 'Utilisateur non trouvé';
+			}, 1000);
+			
 		}else{
 			document.querySelector('.userNotFound').innerHTML = '';
 		}
